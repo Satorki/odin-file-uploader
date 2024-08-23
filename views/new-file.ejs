@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="container">
+    <h1>Odin File Uploader</h1>
+    <a class="btn btn-secondary" href="/">back</a>
+    <h2><%= title %></h2>
+    <form action="/new-file" method="POST">
+      <div class="form-group">
+        <label for="fileName">fileName</label>
+        <input
+          type="text"
+          class="form-control"
+          id="fileName"
+          name="fileName"
+          placeholder="fileName"
+        />
+      </div>
+      <div class="form-group">
+        <label for="file">File</label>
+        <input
+          type="file"
+          class="form-control"
+          id="file"
+          name="file"
+          placeholder="file"
+        />
+      </div>
+      <button class="btn btn-primary" type="submit">Upload</button>
+    </form>
+  </body>
+</html>
