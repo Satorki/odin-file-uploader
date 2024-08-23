@@ -4,7 +4,7 @@ import { PrismaClient } from "@prisma/client";
 import { PrismaSessionStore } from "@quixo3/prisma-session-store";
 
 // EXPRESS START
-import express, { Request, Response } from "express";
+import express from "express";
 const app = express();
 
 // DOTENV CONFIG
@@ -41,10 +41,12 @@ import indexRoutes from "./routes/index";
 import loginRoutes from "./routes/log-in";
 import signupRoutes from "./routes/sign-up";
 import driveRoutes from "./routes/drive";
+import logoutRoutes from "./routes/log-out";
 app.use("/", indexRoutes);
 app.use("/", loginRoutes);
 app.use("/", signupRoutes);
 app.use("/", driveRoutes);
+app.use("/", logoutRoutes);
 
 // APP START
 app.listen(PORT, () => {
