@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin File Uploader</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="container">
+    <h1>Odin File Uploader</h1>
+    <h2><%= title %></h2>
+    <form action="/signup" method="POST">
+      <div class="form-group">
+        <label for="nickname">Nickname</label>
+        <input type="text" id="nickname" name="nickname" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password-confirmation">Password confirmation</label>
+        <input
+          type="password"
+          id="password-confirmation"
+          name="password-confirmation"
+          class="form-control"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+  </body>
+</html>
