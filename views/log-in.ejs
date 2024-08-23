@@ -12,32 +12,31 @@
     />
   </head>
   <body class="container">
-    <div class="container mt-5">
-      <h1>Log In</h1>
-      <h2><%= title %></h2>
-      <form action="/log-in" method="POST">
-        <div class="form-group">
-          <label for="nickname">Nickname</label>
-          <input
-            type="text"
-            class="form-control"
-            id="nickname"
-            name="nickname"
-            placeholder="nickname"
-          />
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input
-            type="password"
-            class="form-control"
-            id="password"
-            name="password"
-            placeholder="password"
-          />
-        </div>
-        <button type="submit" class="btn btn-primary">Log In</button>
-      </form>
-    </div>
+    <h1>Odin File Uploader</h1>
+    <a class="btn btn-secondary" href="/">back</a>
+    <h2><%= title %></h2>
+    <form action="/log-in" method="POST">
+      <div class="form-group">
+        <label for="nickname">Nickname</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nickname"
+          name="nickname"
+          placeholder="nickname"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+          placeholder="password"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Log In</button>
+    </form>
   </body>
 </html>
