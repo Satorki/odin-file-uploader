@@ -11,7 +11,6 @@ router.get("/drive", async (req: Request, res: Response) => {
     },
   });
 
-
   const user = req.session.user as User | undefined;
 
   res.render("drive", {
@@ -23,10 +22,16 @@ router.get("/drive", async (req: Request, res: Response) => {
 });
 
 router.get("/drive/new-file", (req: Request, res: Response) => {
+  const user = req.session.user as User | undefined;
+
+  if (!user) {
+    return res.redirect("/log-in");
+  }
+
   res.render("new-file", { title: "New File" });
 });
 
-router.post("/drive/new-file", async (req: Request, res: Response) => {
+router.post("/drive/add-file", async (req: Request, res: Response) => {
   const user = req.session.user as User | undefined;
 
   if (!user) {
@@ -35,7 +40,7 @@ router.post("/drive/new-file", async (req: Request, res: Response) => {
 
   const file = await prisma.file.create({
     data: {
-      userId: user.id, // Używaj id użytkownika
+      userId: user.id,
       fileName: req.body.name,
       filePath: req.body.path,
     },
