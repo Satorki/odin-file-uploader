@@ -15,7 +15,7 @@
     <h1>Odin File Uploader</h1>
     <a class="btn btn-secondary" href="/">back</a>
     <h2><%= title %></h2>
-    <form action="add-file" method="POST">
+    <form action="add-file" method="POST" enctype="multipart/form-data">
       <div class="form-group">
         <label for="fileName">File Name</label>
         <input

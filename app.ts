@@ -1,17 +1,3 @@
-// MULTER IMPORT
-import multer from "multer";
-
-// MULTER CONFIG
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "./uploads/");
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.originalname);
-  },
-});
-const upload = multer({ storage: storage });
-
 // SESSION IMPORT
 import session from "express-session";
 import { PrismaClient } from "@prisma/client";
