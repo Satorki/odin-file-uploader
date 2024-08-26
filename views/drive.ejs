@@ -47,7 +47,7 @@
           <tr>
             <td><%= file.fileName %></td>
             <td><%= file.filePath %></td>
-            <td><%= user %></td>
+            <td><%= users.find(u => u.id === file.userId)?.nickName || '' %></td>
             <td><%= file.createdAt.toLocaleString() %></td>
           </tr>
           <% }) %>

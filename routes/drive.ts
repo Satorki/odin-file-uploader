@@ -24,15 +24,7 @@ router.get("/drive", async (req: Request, res: Response) => {
     },
   });
 
-  // const fileUserNamesId = files.map((file) => file.userId);
-
-  // const users = await prisma.user.findMany({
-  //   where: {
-  //     id: {
-  //       in: fileUserNamesId,
-  //     },
-  //   },
-  // });
+  const users = await prisma.user.findMany();
 
   const user = req.session.user as User | undefined;
 
@@ -40,7 +32,7 @@ router.get("/drive", async (req: Request, res: Response) => {
     title: "Drive",
     loggedUser: user?.nickName,
     files,
-    user: "",
+    users: users,
     logged: !!user,
   });
 });
